@@ -478,6 +478,8 @@ strong {
   overflow: hidden;
   padding-top: 100px;
   height: calc(100vh - 51px);
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
 }
 
 .hero-section small {
@@ -1020,7 +1022,3 @@ strong {
   }
 }
 
-.hero-section{
-  background-image: url('../images/hero.jpg');
-  background-size: cover;
-}
