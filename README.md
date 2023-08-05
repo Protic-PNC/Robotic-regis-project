@@ -1,2 +1,2 @@
 # Robotic-regis-project
-registrasi lomba robotic
+registrasi lomba robotic.
