@@ -981,17 +981,18 @@ strong {
   background-color: var(--dark-color);
   position: relative;
   overflow: hidden;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
+  padding-top: 40px;
 }
 
-.site-footer-top {
+/* .site-footer-top {
   background-color: var(--secondary-color);
   background-image: url('../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg');
   background-repeat: no-repeat;
   margin-bottom: 70px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+  padding-top: 10px;
+  padding-bottom: 10px;
+} */
 
 .site-footer-bottom {
   border-top: 1px solid #1f1c1c;
@@ -999,7 +1000,8 @@ strong {
 }
 
 .site-footer-title {
-  color: var(--primary-color); 
+  color: var(--primary-color);
+  margin-right: 10px; 
 }
 
 .site-footer-link,
@@ -1042,6 +1044,7 @@ strong {
   color: var(--white-color);
   font-size: var(--copyright-font-size);
   display: block;
+  margin-top: 10px;
   margin-right: 10px;
   text-align: center;
   width: 35px;
