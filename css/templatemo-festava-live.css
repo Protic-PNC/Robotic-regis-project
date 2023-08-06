@@ -643,6 +643,129 @@ strong {
 
 
 /*---------------------------------------
+  TIMELINE              
+-----------------------------------------*/
+/* Garis waktu aktual (penguasa vertikal) */
+.main-timeline {
+  position: relative;
+}
+
+/* Garis waktu aktual (penguasa vertikal) */
+.main-timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #939597;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Wadah konten */
+.timeline {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Bulatan pada garis waktu */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #939597;
+  border: 5px solid #F5DF4D;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Letakkan wadah ke kiri */
+.left {
+  padding: 0px 40px 20px 0px;
+  left: 0;
+}
+
+/* Letakkan wadah ke kanan */
+.right {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+/* Tambahkan panah ke wadah kiri (menunjuk ke kanan) */
+.left::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Tambahkan panah ke wadah kanan (menunjuk ke kiri) */
+.right::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Perbaiki bulatan pada wadah kanan */
+.right::after {
+  left: -12px;
+}
+
+/* Media query - Penyesuaian garis waktu pada layar kurang dari 600px lebar */
+@media screen and (max-width: 600px) {
+
+  /* Letakkan garis waktu ke kiri */
+  .main-timeline::after {
+    left: 31px;
+  }
+
+  /* Wadah penuh lebar */
+  .timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Pastikan semua panah menunjuk ke kiri */
+  .timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Pastikan semua bulatan berada di tempat yang sama */
+  .left::after,
+  .right::after {
+    left: 18px;
+  }
+
+  .left::before {
+    right: auto;
+  }
+
+  /* Buat semua wadah kanan berperilaku seperti wadah kiri */
+  .right {
+    left: 0%;
+  }
+}
+
+
+
+/*---------------------------------------
   SCHEDULE              
 -----------------------------------------*/
 .schedule-section {
