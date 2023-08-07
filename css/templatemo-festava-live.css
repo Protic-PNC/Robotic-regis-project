@@ -507,7 +507,7 @@ strong {
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
-.about-section {
+.about-section{
   background-image: url('../images/edward-unsplash-blur.jpg');
   background-color: #8FBC8F;
   background-repeat: no-repeat;
@@ -588,6 +588,13 @@ strong {
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
+.artists-section {
+  background-image: url('../images/edward-unsplash-blur.jpg');
+  background-color: #8FBC8F;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .artists-thumb {
   position: relative;
   overflow: hidden;
@@ -1075,7 +1082,17 @@ strong {
   }
 }
 
+/* FADE */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(50px); /* Mulai dari bawah dengan pergeseran 50px */
+  transition: opacity 0.7s ease, transform 0.7s ease; /* Efek transisi untuk opacity dan transform */
+}
 
+.fade-in-element.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Kembali ke posisi awal */
+}
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
@@ -1179,14 +1196,5 @@ strong {
     font-size: 20px;
   }
 }
-/* FADE */
-.fade-in-element {
-  opacity: 0;
-  transform: translateY(50px); /* Mulai dari bawah dengan pergeseran 50px */
-  transition: opacity 0.7s ease, transform 0.7s ease; /* Efek transisi untuk opacity dan transform */
-}
 
-.fade-in-element.fade-in {
-  opacity: 1;
-  transform: translateY(0); /* Kembali ke posisi awal */
-}
+
